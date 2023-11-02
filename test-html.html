@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Testing Forms</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="server.php" method="get">
+                <label for="name">Name:
+                    <input type="text" id="name" name="name" />
+                </label><br /></br />
+                <label for="surname">Last Name:
+                    <input type="text" id="surname" name="surname" />
+                </label><br /></br />
+                <button type="submit">send</button>
+            </form>
+            <hr /> <br />
+        </section>
+
+        <section>
+            <form action="server.php" method="get">
+                <label for="pass">Password:
+                    <input type="password" id="pass" name="pass" />
+                </label><br /><br />
+
+                <label for="telephone">Telephone:
+                    <input type="tel" id="telephone" name="telephone" />
+                </label><br /><br />
+
+                <label for="url">URL:
+                    <input type="url" id="url" name="url" />
+                </label><br /><br />
+
+                <label for="mail">Mail:
+                    <input type="email" id="mail" name="mail" />
+                </label><br /><br />
+
+                <label for="search">Search:
+                    <input type="search" id="search" name="search" list="data" />
+                    <datalist id="data">
+                        <option value="Pick A" />
+                        <option value="Pick B" />
+                        <option value="Pick C" />
+                </label><br /><br />
+
+                <button type="submit">Send</button>
+                <br /> <br />
+            </form>
+
+        </section>
+        <form action="server.php" method="get">
+            <fieldset>
+                <p>
+                    <input type="checkbox" name="ingredients" value="Beer" id=1 />
+                    <label for="1">Beer</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="ingredients" value="Wine" id=2 />
+                    <label for="2">Wine</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="ingredients" value="Water" id=3 />
+                    <label for="3">Water</label>
+                </p>
+            </fieldset>
+            <br /><br />
+
+            <section>
+                <form action="server.php" method="get">
+                    <fieldset>
+                        <legend>Gender</legend>
+
+                        <label for="male">
+                            <input type="radio" name=gender id="male" value="male" checked />male
+                        </label>
+
+                        <label for="female">
+                            <input type="radio" name=gender id="female" value="female" />female
+                        </label>
+
+                        <label for="other">
+                            <input type="radio" name=gender id="other" value="other" />other
+                        </label>
+
+                    </fieldset>
+                    <br /><br />
+                </form>
+            </section>
+
+            <section>
+                <form action="server.php" method="get">
+                    <label for=height>Height:
+                        <input id="height" type="number" min="100" max="220" step="1" value="160" /> cm
+                    </label> <br /><br />
+
+                    <label for=weight>Weight:
+                        <input id="weigth" type="number" min="1" max="200" step="1" value="100" /> kg
+                    </label> <br /><br />
+
+                    <button type="submit">Send</button>
+                </form>
+                <br /><br />
+            </section>
+
+            <section>
+                <form action="server.php" method="get">
+                    <fieldset>
+                        <legend>Calculate Ascendent:</legend>
+                        <label for=birthday>Birthday:
+                            <input id="date" type="date" />
+                        </label> <br /><br />
+
+                        <label> Hour you where born:
+                            <input name="hour" type="time" />
+                        </label> <br /><br />
+                        </label> <br /><br />
+
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+                <br /><br />
+            </section>
+
+            <section>
+                <form action="server.php" method="get">
+                    <fieldset>
+                        <legend>Write a comment</legend>
+                        <textarea name="comment" cols="50" rows="10">Type your comment here </textarea>
+                        <br />
+                        <button type="submit"> Send</button>
+                    </fieldset>
+                </form>
+                <br /><br />
+            </section>
+    </main>
+</body>
+
+</html>
