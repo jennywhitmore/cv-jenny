@@ -11,22 +11,34 @@
         <h1>Testing Forms</h1>
     </header>
 
+    <nav>
+        <menu>
+            <li><a href="#name">Input Name</a></li>
+            <li><a href="#vars">Input Variations</a></li>
+            <li><a href="#check">Checkboxes</a></li>
+            <li><a href="#radio">Radio Buttons</a></li>
+            <li><a href="#num">Numeric Inputs</a></li>
+            <li><a href="#cal">Calenders</a></li>
+            <li><a href="#free">Free Text</a></li>
+            <br /><br />
+        </menu>
+    </nav>
+
     <main>
-        <section>
-            <form action="server.php" method="get">
-                <label for="name">Name:
-                    <input type="text" id="name" name="name" />
-                </label><br /></br />
-                <label for="surname">Last Name:
-                    <input type="text" id="surname" name="surname" />
-                </label><br /></br />
-                <button type="submit">send</button>
+        <article id="name">
+            <form>
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" />
+                    <br /><br />
+                    <button type="submit">Send</button>
+                </div>
             </form>
             <hr /> <br />
-        </section>
+        </article>
 
-        <section>
-            <form action="server.php" method="get">
+        <article id="vars">
+            <form>
                 <label for="pass">Password:
                     <input type="password" id="pass" name="pass" />
                 </label><br /><br />
@@ -54,93 +66,95 @@
                 <button type="submit">Send</button>
                 <br /> <br />
             </form>
+        </article>
 
-        </section>
-        <form action="server.php" method="get">
-            <fieldset>
-                <p>
-                    <input type="checkbox" name="ingredients" value="Beer" id=1 />
-                    <label for="1">Beer</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="ingredients" value="Wine" id=2 />
-                    <label for="2">Wine</label>
-                </p>
-                <p>
-                    <input type="checkbox" name="ingredients" value="Water" id=3 />
-                    <label for="3">Water</label>
-                </p>
-            </fieldset>
+        <article id="check">
+            <form>
+                <fieldset>
+                    <p>
+                        <input type="checkbox" name="ingredients" value="Beer" id=1 />
+                        <label for="1">Beer</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="ingredients" value="Wine" id=2 />
+                        <label for="2">Wine</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="ingredients" value="Water" id=3 />
+                        <label for="3">Water</label>
+                    </p>
+                </fieldset>
+                <br /><br />
+            </form>
+        </article>
+
+        <article id="radio">
+            <form>
+                <fieldset>
+                    <legend>Gender</legend>
+
+                    <label for="male">
+                        <input type="radio" name=gender id="male" value="male" checked />male
+                    </label>
+
+                    <label for="female">
+                        <input type="radio" name=gender id="female" value="female" />female
+                    </label>
+
+                    <label for="other">
+                        <input type="radio" name=gender id="other" value="other" />other
+                    </label>
+
+                </fieldset>
+                <br /><br />
+            </form>
+        </article>
+
+        <article id="num">
+            <form>
+                <label for=height>Height:
+                    <input id="height" type="number" min="100" max="220" step="1" value="160" /> cm
+                </label> <br /><br />
+
+                <label for=weight>Weight:
+                    <input id="weigth" type="number" min="1" max="200" step="1" value="100" /> kg
+                </label> <br /><br />
+
+                <button type="submit">Send</button>
+            </form>
             <br /><br />
+        </article>
 
-            <section>
-                <form action="server.php" method="get">
-                    <fieldset>
-                        <legend>Gender</legend>
-
-                        <label for="male">
-                            <input type="radio" name=gender id="male" value="male" checked />male
-                        </label>
-
-                        <label for="female">
-                            <input type="radio" name=gender id="female" value="female" />female
-                        </label>
-
-                        <label for="other">
-                            <input type="radio" name=gender id="other" value="other" />other
-                        </label>
-
-                    </fieldset>
-                    <br /><br />
-                </form>
-            </section>
-
-            <section>
-                <form action="server.php" method="get">
-                    <label for=height>Height:
-                        <input id="height" type="number" min="100" max="220" step="1" value="160" /> cm
+        <article id="cal">
+            <form>
+                <fieldset>
+                    <legend>Calculate Ascendent:</legend>
+                    <label for=birthday>Birthday:
+                        <input id="date" type="date" />
                     </label> <br /><br />
 
-                    <label for=weight>Weight:
-                        <input id="weigth" type="number" min="1" max="200" step="1" value="100" /> kg
+                    <label> Hour you where born:
+                        <input name="hour" type="time" />
+                    </label> <br /><br />
                     </label> <br /><br />
 
                     <button type="submit">Send</button>
-                </form>
-                <br /><br />
-            </section>
+                </fieldset>
+            </form>
+            <br /><br />
+        </article>
 
-            <section>
-                <form action="server.php" method="get">
-                    <fieldset>
-                        <legend>Calculate Ascendent:</legend>
-                        <label for=birthday>Birthday:
-                            <input id="date" type="date" />
-                        </label> <br /><br />
-
-                        <label> Hour you where born:
-                            <input name="hour" type="time" />
-                        </label> <br /><br />
-                        </label> <br /><br />
-
-                        <button type="submit">Send</button>
-                    </fieldset>
-                </form>
-                <br /><br />
-            </section>
-
-            <section>
-                <form action="server.php" method="get">
-                    <fieldset>
-                        <legend>Write a comment</legend>
-                        <textarea name="comment" cols="50" rows="10">Type your comment here </textarea>
-                        <br />
-                        <button type="submit"> Send</button>
-                    </fieldset>
-                </form>
-
-                <br /><br />
-            </section>
+        <article id="free">
+            <form>
+                <fieldset>
+                    <legend>Write a comment</legend>
+                    <textarea name="comment" cols="50" rows="10">Type your comment here </textarea>
+                    <br />
+                    <button type="submit"> Send</button>
+                </fieldset>
+            </form>
+            <br /><br />
+        </article>
     </main>
 </body>
 
