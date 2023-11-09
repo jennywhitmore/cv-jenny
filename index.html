@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> CV of Jenny Whitmore </title>
     <meta name="description" content="This is the CV of Jenny Whitmore" />
     <meta name="author" content="Jenny Whitmore's CV" />
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,800&family=Oswald:wght@300;400&display=swap"
         rel="stylesheet">
-    <title>CV of Jenny Whitmore</title>
 </head>
 
 <body>
     <header class="header">
         <h1>Jenny Whitmore</h1>
-        <p class="profession">Web Developer</p>
+        <p class="profession"> Web Developer </p>
         <nav>
             <hr />
             <menu>
@@ -40,7 +41,7 @@
 
     <main class="main">
         <article id="profile">
-            <h2>Profile</h2>
+            <h2 class="article-heading">Profile</h2>
             <p>With over 10 years of experience in graphic design, especially focusing on <em>prototyping</em>
                 and <em>mock-ups</em>, I recently trained on <em>UX/UI</em>.
                 <br />
@@ -66,10 +67,15 @@
         </article>
 
         <article id="experience">
-            <h2>Experience</h2>
+            <h2 class="article-heading">Experience</h2>
             <section>
-                <h3>Graphic Artist</h3>
-                <p>January 2012 - Present</p>
+                <header>
+                    <h3 class="experience-heading">
+                        Graphic Artist
+                    </h3>
+                    <p class="experience-subheading"> January 2012 - Present</p>
+                </header>
+
                 <p>Working as a <strong> product & film prop designer</strong> for various clients,
                     especially focused on the film and television branch.
                     <br />
@@ -86,42 +92,56 @@
                     <li>Neue Super</li>
                     <li>Securitel</li>
                     <li>ZDF</li>
-
                 </ul>
             </section>
 
             <section>
-                <h3>Web Developer</h3>
-                <p>October 2023 - Present</p>
-                <p>Started a web dev bootcamp at <a target="_blank" rel="noopener"
+                <header>
+                    <h3 class="experience-heading">
+                        Web Developer
+                    </h3>
+                    <p class="experience-subheading"> October 2023 - Present </p>
+                </header>
+                <p>
+                    Started a web dev bootcamp at <a target="_blank" rel="noopener"
                         href="https://www.coding-bootcamps.eu/"> Coding Bootcamp Europe </a>
                 </p>
+                </header>
             </section>
         </article>
 
         <article id="skills">
-            <h2>Skills</h2>
+            <h2 class="article-heading">Skills</h2>
             <section>
-                <h3>Tech Skills</h3>
+                <header>
+                    <h3 class="experience-heading">
+                        Tech Skills
+                </header>
+
                 <h4>Graphic Design:</h4>
+
                 <ul>
-                    <li>⭐⭐⭐ Photoshop</li>
-                    <li>⭐⭐⭐ XD</li>
-                    <li>⭐⭐⭐ Illustrator</li>
-                    <li>⭐⭐⭐ ProtoPie</li>
-                    <li>⭐⭐ InDesign</li>
-                    <li>⭐⭐ Premiere</li>
+                    <li class="three-stars"> Photoshop</li>
+                    <li class="three-stars"> XD </li>
+                    <li class="three-stars"> Illustrator </li>
+                    <li class="three-stars"> ProtoPie </li>
+                    <li class="two-stars"> InDesign </li>
+                    <li class="two-stars"> Premiere </li>
                 </ul>
+
                 <h4>Web Development:</h4>
                 <ul>
-                    <li>🌱 HTML</li>
-                    <li>🌱 CSS</li>
-                    <li>⭐ Python</li>
-                    <li>⭐⭐⭐ UML</li>
+                    <li class="growth"> HTML </li>
+                    <li class="growth"> CSS </li>
+                    <li class="one-star"> Python </li>
+                    <li class="three-stars"> UML </li>
                 </ul>
             </section>
 
-            <h3>Soft Skills</h3>
+            <header>
+                <h3>Soft Skills</h3>
+            </header>
+
             <section>
                 <ul>
                     <li>initiative</li>
@@ -139,17 +159,24 @@
         </article>
 
         <article id="contact">
-            <h2>Contact</h2>
+            <h2 class="article-heading">Contact</h2>
             <section>
                 <ol>
-                    <li><a href="mailto:your.name@example.com">📧 E-Mail</a></li>
-                    <li><a href="tel:+491607696669">📞 Phone</a></li>
-                    <li><a href="https://www.discordapp.com/users/1160525888551661688">🖥️ Discord</a></li>
+                    <li class="mailto"> <a href="mailto:your.name@example.com">E-Mail</a></li>
+                    <li class="phone"> <a href="tel:+491607696669">Phone</a></li>
+                    <li class="discord"> <a href="https://www.discordapp.com/users/1160525888551661688">Discord</a></li>
                 </ol>
 
             </section>
         </article>
+
     </main>
+
+    <aside>
+        <div class="button">
+            <img src="cv-jenny/assets/pics/linkedin.png" alt="My Linkedin">
+        </div>
+    </aside>
     <footer>
         <hr />
         Jenny Whitmore | Leuschnerstr. 61 | 82008 Unterhaching | Phone: +49 160 769 66 69 | Mail: whitmore@mail.de
