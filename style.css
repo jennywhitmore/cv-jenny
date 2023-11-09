@@ -13,11 +13,6 @@ html {
   font-size: 20px;
 }
 
-h1 {
-  text-transform: uppercase;
-  font-family: "Advent Pro", sans-serif;
-}
-
 h2 {
   border-bottom: 0.1rem solid dimgrey;
   padding: 0.2rem;
@@ -29,7 +24,7 @@ body {
 
 menu {
   border-top: 0.1rem solid grey;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 *::selection {
@@ -50,84 +45,68 @@ footer {
 }
 
 /*---------------------------------------------------------------------*/
+/* Media Queries */
+/*---------------------------------------------------------------------*/
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
+}
+
+@media print {
+  .button-github {
+    display: none;
+  }
+}
+
+@media print {
+  .button-linkedin {
+    display: none;
+  }
+}
+
+@media print {
+  .navigation {
+    display: none;
+  }
+}
+/*---------------------------------------------------------------------*/
 /* Specific Stylings */
 /*---------------------------------------------------------------------*/
-.button-linkedin {
-  background-color: deepskyblue;
-  color: white;
-  opacity: 0.8;
-  position: fixed;
-  top: 1rem;
-  right: 4rem;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2px solid grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-linkedin img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.button-linkedin img:nth-child(2) {
-  display: none;
-}
-
-.button-linkedin img:hover {
-  display: none;
-}
-
-.button-linkedin img:hover + img {
-  display: block;
-}
-
-.button-github {
-  background-color: black;
-  color: white;
-  opacity: 0.8;
-  position: fixed;
-  top: 6.3rem;
-  right: 4rem;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  border: 2px solid grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-github img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.button-github img:nth-child(2) {
-  display: none;
-}
-
-.button-github img:hover {
-  display: none;
-}
-
-.button-github img:hover + img {
-  display: block;
-}
 
 .header {
-  padding: 48px 16px;
-  padding-top: 72px;
+  padding: 3rem 1rem;
+  padding-top: 4.5rem;
   text-align: center;
   background-color: gainsboro;
   position: relative;
 }
 
-.profession {
+.heading-all {
+  font-size: 1rem;
   text-transform: uppercase;
+}
+
+.headline-root {
+  font-size: 3em;
+  font-family: "Advent Pro", sans-serif;
+}
+
+.profession {
+  font-size: 1.2em;
 }
 
 .link {
@@ -140,7 +119,7 @@ footer {
   background-color: gainsboro;
 }
 .main {
-  max-width: 800px;
+  max-width: 90ch;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -171,6 +150,74 @@ footer {
 
 .experience-subheading {
   color: dimgray;
+}
+
+/*----------------*/
+/* ASIDE BUTTONS */
+/*----------------*/
+
+.button-linkedin {
+  background-color: deepskyblue;
+  color: white;
+  opacity: 0.8;
+  position: fixed;
+  top: 6rem;
+  right: 1.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-linkedin img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.button-linkedin img:nth-child(2) {
+  display: none;
+}
+
+.button-linkedin img:hover {
+  display: none;
+}
+
+.button-linkedin img:hover + img {
+  display: block;
+}
+
+.button-github {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-github img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.button-github img:nth-child(2) {
+  display: none;
+}
+
+.button-github img:hover {
+  display: none;
+}
+
+.button-github img:hover + img {
+  display: block;
 }
 
 /*----------------*/
