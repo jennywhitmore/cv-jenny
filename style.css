@@ -10,6 +10,7 @@
 
 html {
   font-family: "Oswald", sans-serif;
+  font-size: 20px;
 }
 
 h1 {
@@ -18,12 +19,17 @@ h1 {
 }
 
 h2 {
-  border-bottom: 2px solid dimgrey;
-  padding: 0.2em;
+  border-bottom: 0.1rem solid dimgrey;
+  padding: 0.2rem;
 }
 
 body {
   margin: 0;
+}
+
+menu {
+  border-top: 0.1rem solid grey;
+  margin: 2rem;
 }
 
 *::selection {
@@ -32,7 +38,7 @@ body {
 
 nav li {
   display: inline-block;
-  margin: 10px;
+  margin: 0.5rem;
 }
 
 li {
@@ -46,20 +52,70 @@ footer {
 /*---------------------------------------------------------------------*/
 /* Specific Stylings */
 /*---------------------------------------------------------------------*/
-.button {
+.button-linkedin {
   background-color: deepskyblue;
   color: white;
   opacity: 0.8;
   position: fixed;
-  top: 40px;
-  right: 40px;
-  width: 100px;
-  height: 100px;
+  top: 1rem;
+  right: 4rem;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   border: 2px solid grey;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button-linkedin img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.button-linkedin img:nth-child(2) {
+  display: none;
+}
+
+.button-linkedin img:hover {
+  display: none;
+}
+
+.button-linkedin img:hover + img {
+  display: block;
+}
+
+.button-github {
+  background-color: black;
+  color: white;
+  opacity: 0.8;
+  position: fixed;
+  top: 6.3rem;
+  right: 4rem;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-github img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.button-github img:nth-child(2) {
+  display: none;
+}
+
+.button-github img:hover {
+  display: none;
+}
+
+.button-github img:hover + img {
+  display: block;
 }
 
 .header {
@@ -75,7 +131,7 @@ footer {
 }
 
 .link {
-  padding: 5px 10px;
+  padding: 0.25rem 0.5rem;
   color: dimgrey;
 }
 
@@ -86,14 +142,14 @@ footer {
 .main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
 }
 .main > * + * {
-  margin-top: 48px;
+  margin-top: 2.2rem;
 }
 .main > * {
   padding-top: 0;
-  padding-right: 16px;
+  padding-right: 1rem;
 }
 
 .main > *:first-child {
@@ -102,7 +158,7 @@ footer {
 
 .article-heading {
   position: relative;
-  left: -16px;
+  left: -1rem;
 }
 
 .experience-heading {
