@@ -14,56 +14,26 @@ html {
 }
 
 h2 {
-  color: var(--text-color-b);
-  display: inline;
-  padding-top: 0.2rem;
-  padding-right: 1.5rem;
-  padding-left: 1rem;
-  padding-bottom: 0;
-  background-color: thistle;
-  border-top-right-radius: 3rem;
+  border-bottom: 0.1rem solid dimgrey;
+  padding: 0.2rem;
 }
 
 body {
-  --background-color: white;
-  --text-color: black;
-  --text-color-b: black;
-  --secondary-text-color: dimgrey;
-  --selection-color: lemonchiffon;
-  --link-hoverhit-color: rebeccapurple;
-  --themed-color-a: thistle;
-  --themed-color-b: #c4e4df;
-  --color-linkedin: deepskyblue;
-
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
 }
 
 menu {
-  border-top: 0.1rem solid var(--text-color-b);
-  display: inline-block;
+  border-top: 0.1rem solid grey;
   margin: 1rem;
 }
 
 *::selection {
-  background-color: var(--selection-color);
-}
-
-a,
-a:link,
-a:active {
-  color: var(--secondary-text-color);
-}
-
-a:hover,
-a:visited {
-  color: var(--link-hoverhit-color);
+  background-color: ghostwhite;
 }
 
 nav li {
   display: inline-block;
-  margin-top: 1rem;
+  margin: 0.5rem;
 }
 
 li {
@@ -96,14 +66,6 @@ footer {
   }
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  body {
-    --background-color: black;
-    --text-color: white;
-    --text-color-b: black;
-  }
-}
-
 @media print {
   aside {
     display: none;
@@ -126,74 +88,35 @@ footer {
 /*---------------------------------------------------------------------*/
 
 .header {
-  padding: 0.2rem;
+  padding: 3rem 1rem;
   padding-top: 4.5rem;
-  margin-bottom: 4rem;
   text-align: center;
-  background-image: linear-gradient(
-    150deg,
-    var(--themed-color-a) 20%,
-    var(--themed-color-b) 20%,
-    var(--themed-color-b) 91%,
-    var(--themed-color-a) 10%
-  );
+  background-color: gainsboro;
   position: relative;
 }
 
 .heading-all {
-  color: var(--text-color-b);
   font-size: 1rem;
   text-transform: uppercase;
 }
 
-.header-menu {
-  padding-inline-start: 0;
-} /* Keeps header menu properly centered. Kill, then Cascade user-stylesheet will add 40px padding. */
-
 .headline-root {
-  font-size: 3.5em;
+  font-size: 3em;
   font-family: "Advent Pro", sans-serif;
 }
 
-.underline-profile {
-  border-top: 0.13rem solid var(--themed-color-a);
-  margin-top: 0.2rem;
-  position: relative;
-  left: -1rem;
-}
-
-.underline-experience {
-  border-top: 0.13rem solid var(--themed-color-a);
-  margin-top: 0.2rem;
-  position: relative;
-  left: -1rem;
-}
-
-.underline-skills {
-  border-top: 0.13rem solid var(--themed-color-a);
-  margin-top: 0.2rem;
-  position: relative;
-  left: -1rem;
-}
-
-.underline-contact {
-  border-top: 0.13rem solid var(--themed-color-a);
-  margin-top: 0.2rem;
-  position: relative;
-  left: -1rem;
-}
-
 .profession {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .link {
   padding: 0.25rem 0.5rem;
-  color: var(--text-color);
+  color: dimgrey;
 }
 
 .link:hover {
-  color: var(--link-hoverhit-color);
+  color: indigo;
+  background-color: gainsboro;
 }
 .main {
   max-width: 90ch;
@@ -226,18 +149,7 @@ footer {
 }
 
 .experience-subheading {
-  color: var(--secondary-text-color);
-}
-
-.footer {
-  color: var(--text-color-b);
-  padding: 0.7rem;
-  background-image: linear-gradient(
-    150deg,
-    var(--themed-color-b) 10%,
-    var(--themed-color-a) 10%,
-    var(--themed-color-a) 90%
-  );
+  color: dimgray;
 }
 
 /*----------------*/
@@ -245,8 +157,8 @@ footer {
 /*----------------*/
 
 .button-linkedin {
-  background-color: var(--color-linkedin);
-  color: var(--background-color);
+  background-color: deepskyblue;
+  color: white;
   opacity: 0.8;
   position: fixed;
   top: 6rem;
@@ -277,8 +189,8 @@ footer {
 }
 
 .button-github {
-  background-color: var(--text-color);
-  color: var(--background-color);
+  background-color: black;
+  color: white;
   opacity: 0.8;
   position: fixed;
   top: 1rem;
