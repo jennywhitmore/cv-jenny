@@ -52,12 +52,12 @@ menu {
 
 a,
 a:link,
-a:active {
+a:active,
+a:visited {
   color: var(--secondary-text-color);
 }
 
-a:hover,
-a:visited {
+a:hover {
   color: var(--link-hoverhit-color);
 }
 
@@ -99,8 +99,9 @@ footer {
 @media screen and (prefers-color-scheme: dark) {
   body {
     --background-color: black;
-    --text-color: white;
+    --text-color: ghostwhite;
     --text-color-b: black;
+    --selection-color: mediumpurple;
   }
 }
 
@@ -148,11 +149,22 @@ footer {
 
 .header-menu {
   padding-inline-start: 0;
-} /* Keeps header menu properly centered. Kill, then Cascade user-stylesheet will add 40px padding. */
+  /* Keeps header menu properly centered. Kill, then Cascade user-stylesheet will add 40px padding. */
+  color: var(--link-hoverhit-color);
+}
 
 .headline-root {
   font-size: 3.5em;
   font-family: "Advent Pro", sans-serif;
+  color: black;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.heading-all:hover .headline-root,
+.heading-all:focus-within .headline-root {
+  color: rebeccapurple;
+  text-shadow: -0.1rem -0.1rem black;
+  transform: scale(1.5);
 }
 
 .underline-profile {
@@ -190,19 +202,27 @@ footer {
 .link {
   padding: 0.25rem 0.5rem;
   color: var(--text-color);
+  transition: color 0.25s ease-in-out;
 }
 
 .link:hover {
   color: var(--link-hoverhit-color);
 }
+
+.link:focus {
+  color: var(--color-linkedin);
+}
+
 .main {
   max-width: 90ch;
   margin: 0 auto;
   padding: 1rem;
 }
+
 .main > * + * {
   margin-top: 2.2rem;
 }
+
 .main > * {
   padding-top: 0;
   padding-right: 1rem;
